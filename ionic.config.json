@@ -1,0 +1,8 @@
+{
+  "name": "carnavalapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "64f1ef7b"
+}

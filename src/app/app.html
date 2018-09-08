@@ -1,0 +1,27 @@
+<ion-menu [content]="content" type="overlay">
+    <!-- <ion-header no-border>
+      <ion-toolbar>
+       <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header> -->
+
+    <ion-content>
+      <ion-card>
+        <ion-card-content>
+                <div style="text-align: center; align-content: center; align-self: center;">
+                    <ion-img style="width: 50px; height: 50px;" src="../assets/imgs/logo_carnaval.png">Carnaval</ion-img>
+                </div>
+              </ion-card-content>
+        </ion-card>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon" item-left></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

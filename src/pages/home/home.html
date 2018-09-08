@@ -1,0 +1,77 @@
+<ion-header no-border>
+    <ion-buttons class="masters" no-border>
+    <button ion-button large menuToggle color="roxo">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+    <!-- <ion-title>Home</ion-title> -->
+</ion-header>
+
+<ion-content padding class="masters">
+    <br>
+      <div class="logotipo">
+          <ion-img style="width: 200px; height: 200px;" src="../../assets/imgs/logo_carnaval.png" class="masters">Carnaval</ion-img>
+        </div>
+    <br>
+  <div class="logotipo">
+    <button ion-button color="laranja" round large (click)="noticias()" style="width:45%">
+        <div>
+            <div>
+                <ion-icon name="refresh"></ion-icon>
+            </div>
+            <label>Notícias</label>
+      </div>
+      </button>
+
+      <button ion-button color="laranja" round large (click)="cidade()" style="width:45%">
+          <div>
+              <div>
+                  <ion-icon name="pin"></ion-icon>
+              </div>
+              <label>Cidade</label>
+        </div>
+        </button>
+        <button ion-button color="laranja" round large (click)="eventos()" style="width:45%">
+            <div>
+              <div>
+                    <ion-icon name="calendar"></ion-icon>
+              </div>
+              <label>Eventos</label>
+            </div>
+          </button>
+
+          <button ion-button color="laranja" round large (click)="historia()" style="width:45%">
+              <div>
+                  <div>
+                      <ion-icon name="book"></ion-icon>
+                  </div>
+                  <label>História</label>
+              </div>
+            </button>
+
+            <button ion-button color="laranja" round large (click)="telefone()" style="width:45%">
+                <div>
+                    <div>
+                        <ion-icon name="call"></ion-icon>
+                    </div>
+                    <label>Telefones</label>
+                </div>
+              </button>
+
+              <button ion-button color="laranja" round large (click)="sobre()" style="width:45%">
+                  <div>
+                      <div>
+                          <ion-icon name="information-circle"></ion-icon>
+                      </div>
+                      <label>Sobre</label>
+                  </div>
+                </button>
+              </div>
+                <br><br>
+
+              <div class="social">
+                  <ion-img id="icone" src="../../assets/imgs/ic_fb.png" (click)="fb()">Facebook</ion-img>
+                  <ion-img id="icone" src="../../assets/imgs/ic_instagram.png" (click)="ig()">Instagram</ion-img>
+                  <ion-img id="icone" src="../../assets/imgs/ic_twitter.png" (click)="tt()">Twitter</ion-img>
+              </div>
+</ion-content>
