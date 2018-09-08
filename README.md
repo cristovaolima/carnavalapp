@@ -2,7 +2,7 @@
 
 # Aplicativo para o Carnaval
 
-Aplicativo para mobile feito em ionic, para rodar é necessário ter o node.js instalado na sua máquina.
+Aplicativo para mobile feito em ionic, para rodar é necessário ter o [NodeJs](https://nodejs.org/) instalado na sua máquina.
 Logo após ter instalado, abrir o cmd na pasta que clonou esse projeto, digite:
 
 `npm install -g ionic cordova`
