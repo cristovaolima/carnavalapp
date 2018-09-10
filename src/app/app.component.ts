@@ -10,6 +10,7 @@ import { CidadePage } from '../pages/cidade/cidade';
 import { TelefonesPage } from '../pages/telefones/telefones';
 import { EventosPage } from '../pages/eventos/eventos';
 import { HistoriaPage } from '../pages/historia/historia';
+import { MapaPage } from '../pages/mapa/mapa';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,6 +32,7 @@ export class MyApp {
       { icon: 'book', title: 'História', component: HistoriaPage },
       { icon: 'calendar', title: 'Eventos', component: EventosPage },
       { icon: 'call', title: 'Telefones', component: TelefonesPage },
+      { icon: 'map', title: 'Mapas', component: MapaPage },
       { icon: 'pin', title: 'Cidade', component: CidadePage },
       { icon: 'information-circle', title: 'Sobre', component: SobrePage }
     ];

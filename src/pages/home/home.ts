@@ -7,8 +7,8 @@ import { NoticiasPage } from '../noticias/noticias';
 import { CidadePage } from '../cidade/cidade';
 import { EventosPage } from '../eventos/eventos';
 import { HistoriaPage } from '../historia/historia';
-import { SobrePage } from '../sobre/sobre';
 import { TelefonesPage } from '../telefones/telefones';
+import { MapaPage } from '../mapa/mapa';
 
 @Component({
   selector: 'page-home',
@@ -34,8 +34,8 @@ export class HomePage {
   historia() {
     this.navCtrl.push(HistoriaPage);
   }
-  sobre() {
-    this.navCtrl.push(SobrePage);
+  mapa() {
+    this.navCtrl.push(MapaPage);
   }
   telefone() {
     this.navCtrl.push(TelefonesPage);

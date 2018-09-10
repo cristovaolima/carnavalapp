@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Tabs, Events } from 'ionic-angular';
 import { RestaurantesPage } from '../restaurantes/restaurantes';
 import { HoteisPage } from '../hoteis/hoteis';
+import { LojasPage } from '../lojas/lojas';
 
 
 /**
@@ -21,6 +22,7 @@ export class CidadePage {
 
   hoteis: any = HoteisPage;
   restaurantes: any = RestaurantesPage;
+  lojas: any = LojasPage;
   mySelectedIndex: number;
 
 

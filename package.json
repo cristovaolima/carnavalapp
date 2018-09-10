@@ -38,7 +38,8 @@
   "cordova": {
     "plugins": {
       "mx.ferreyra.callnumber": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-firebase": {}
     }
   }
 }

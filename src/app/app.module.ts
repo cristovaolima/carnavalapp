@@ -16,6 +16,8 @@ import { TelefonesPage } from '../pages/telefones/telefones';
 import { ListPage } from '../pages/list/list';
 import { RestaurantesPage } from '../pages/restaurantes/restaurantes';
 import { HoteisPage } from '../pages/hoteis/hoteis';
+import { MapaPage } from '../pages/mapa/mapa';
+import { LojasPage } from '../pages/lojas/lojas';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,10 @@ import { HoteisPage } from '../pages/hoteis/hoteis';
     EventosPage,
     SobrePage,
     TelefonesPage,
+    MapaPage,
     HoteisPage,
-    RestaurantesPage
+    RestaurantesPage,
+    LojasPage
   ],
   imports: [
     BrowserModule,
@@ -46,8 +50,10 @@ import { HoteisPage } from '../pages/hoteis/hoteis';
     EventosPage,
     SobrePage,
     TelefonesPage,
+    MapaPage,
     HoteisPage,
-    RestaurantesPage
+    RestaurantesPage,
+    LojasPage
   ],
   providers: [
     StatusBar,

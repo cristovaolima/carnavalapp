@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the RestaurantesPage page.
+ * Generated class for the LojasPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,18 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-restaurantes',
-  templateUrl: 'restaurantes.html',
+  selector: 'page-lojas',
+  templateUrl: 'lojas.html',
 })
-export class RestaurantesPage {
-
-  restaurantes: Array<{nome: string, telefone: string, endereco: string}>;
+export class LojasPage {
+  lojas: Array<{nome: string, telefone: string, endereco: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.restaurantes = [];
+
+    this.lojas = [];
     for (let p = 1; p < 6; p++) {
-      this.restaurantes.push({
-        nome: 'Restaurante ' + p,
+      this.lojas.push({
+        nome: 'Loja ' + p,
         endereco: 'Endereço '+p,
         telefone: 'Telefone ' + p,
       });
@@ -33,7 +33,7 @@ export class RestaurantesPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RestaurantesPage');
+    console.log('ionViewDidLoad LojasPage');
   }
 
 }
