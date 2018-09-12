@@ -16,8 +16,6 @@ import { MapaPage } from '../mapa/mapa';
 })
 export class HomePage {
 
-
-
   constructor(public navCtrl: NavController) {
 
   }

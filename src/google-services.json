@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "421216346605",
+    "firebase_url": "https://carnaval-1534535777439.firebaseio.com",
+    "project_id": "carnaval-1534535777439",
+    "storage_bucket": "carnaval-1534535777439.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421216346605:android:a254afc0bf078792",
+        "android_client_info": {
+          "package_name": "br.com.caicocarnaval"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421216346605-upaf4j5s1n3t3oeus9k5i68joov60fb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrYDHfyt1GMk2bOD1sR2vcuz9tCFKJts8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

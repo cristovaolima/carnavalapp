@@ -16,9 +16,9 @@
 <ion-content padding>
 
     <ion-list>
-        <button ion-item *ngFor="let p of item" (click)="itemTapped($event, p)">
-          <div class="item-local" item-start>
-          {{p.local}}
+        <button ion-item *ngFor="let p of item">
+          <div class="item-lugar" item-start>
+          {{p.lugar}}
           </div>
           <div class="item-telefone">
             {{p.telefone}}

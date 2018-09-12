@@ -1,8 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Tabs, Events } from 'ionic-angular';
-import { RestaurantesPage } from '../restaurantes/restaurantes';
-import { HoteisPage } from '../hoteis/hoteis';
-import { LojasPage } from '../lojas/lojas';
+import { IonicPage, NavController, NavParams, Tabs, Events, Slides } from 'ionic-angular';
 
 
 /**
@@ -18,16 +15,44 @@ import { LojasPage } from '../lojas/lojas';
   templateUrl: 'cidade.html',
 })
 export class CidadePage {
-  @ViewChild('myTabs') tabs: Tabs;
+  @ViewChild('SwipedTabsSlider') SwipedTabsSlider: Slides ;
 
-  hoteis: any = HoteisPage;
-  restaurantes: any = RestaurantesPage;
-  lojas: any = LojasPage;
+  SwipedTabsIndicator :any= null;
+  tabs:any=[];
   mySelectedIndex: number;
+  hoteis: Array<{nome: string, telefone: string, endereco: string}>;
+  restaurantes: Array<{nome: string, telefone: string, endereco: string}>;
+  lojas: Array<{nome: string, telefone: string, endereco: string}>;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private evts:Events) {
+      this.hoteis = [];
+      for (let p = 1; p < 6; p++) {
+        this.hoteis.push({
+          nome: 'Hotel ' + p,
+          endereco: 'Endereço '+p,
+          telefone: 'Telefone ' + p,
+        });
+      }
+
+      this.restaurantes = [];
+      for (let p = 1; p < 6; p++) {
+        this.restaurantes.push({
+          nome: 'Restaurante ' + p,
+          endereco: 'Endereço '+p,
+          telefone: 'Telefone ' + p,
+        });
+      }
+
+      this.lojas = [];
+      for (let p = 1; p < 6; p++) {
+        this.lojas.push({
+          nome: 'Loja ' + p,
+          endereco: 'Endereço '+p,
+          telefone: 'Telefone ' + p,
+        });
+      }
 
       this.evts.subscribe('tabs:changetab',(data)=>{
 
@@ -47,8 +72,36 @@ export class CidadePage {
       this.mySelectedIndex = data.tabIndex;
     });
     this.mySelectedIndex = navParams.data.tabIndex || 0;
+
+    this.tabs=["Hotéis","Restaurantes", "Lojas"];
   }
 
+  itemTapped(event, p) {
+    // That's right, we're pushing to ourselves!
+  }
+
+  ionViewDidEnter() {
+    this.SwipedTabsIndicator = document.getElementById("indicator");
+  }
+
+  selectTab(index) {
+    this.SwipedTabsIndicator.style.webkitTransform = 'translate3d('+(100*index)+'%,0,0)';
+    this.SwipedTabsSlider.slideTo(index, 500);
+  }
+
+  updateIndicatorPosition() {
+      // this condition is to avoid passing to incorrect index
+  	if( this.SwipedTabsSlider.length()> this.SwipedTabsSlider.getActiveIndex())
+  	{
+  		this.SwipedTabsIndicator.style.webkitTransform = 'translate3d('+(this.SwipedTabsSlider.getActiveIndex() * 100)+'%,0,0)';
+  	}
+
+    }
+
+  animateIndicator($event) {
+  	if(this.SwipedTabsIndicator)
+   	    this.SwipedTabsIndicator.style.webkitTransform = 'translate3d(' + (($event.progress* (this.SwipedTabsSlider.length()-1))*100) + '%,0,0)';
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CidadePage');

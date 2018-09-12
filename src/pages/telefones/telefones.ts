@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-
 /**
  * Generated class for the TelefonesPage page.
  *
@@ -15,14 +14,14 @@ import { HomePage } from '../home/home';
   templateUrl: 'telefones.html',
 })
 export class TelefonesPage {
-  item: Array<{local: string, telefone: string}>;
+  item: Array<{ lugar: string, telefone: string }>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.item = [];
     for (let p = 1; p < 6; p++) {
       this.item.push({
-      	local: 'Lugar ' + p,
+      	lugar: 'Lugar ' + p,
         telefone: 'Telefone ' + p,
       });
     }
