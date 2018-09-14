@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Cadastrar Restaurante</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<form [formGroup]="form">
+  <ion-item>
+    <ion-input type="text" formControlName="nome" placeholder="Nome do Restaurante"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="!form.controls.nome.valid && (form.controls.nome.dirty || form.controls.nome.touched)" color="danger">
+    <div [hidden]="!form.controls.nome.errors.required">
+      O campo é obrigatório
+    </div>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" formControlName="endereco" placeholder="Endereço"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="!form.controls.endereco.valid && (form.controls.endereco.dirty || form.controls.endereco.touched)" color="danger">
+    <div [hidden]="!form.controls.endereco.errors.required">
+      O campo é obrigatório
+    </div>
+  </ion-item>
+
+    <ion-item>
+      <ion-input type="text" formControlName="telefone" placeholder="Telefone"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.telefone.valid && (form.controls.telefone.dirty || form.controls.telefone.touched)" color="danger">
+      <div [hidden]="!form.controls.telefone.errors.required">
+        O campo é obrigatório
+      </div>
+    </ion-item>
+
+  <div padding>
+   <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Cadastrar</button>
+  </div>
+
+</form>
+</ion-content>

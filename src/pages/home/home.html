@@ -7,15 +7,15 @@
     <!-- <ion-title>Home</ion-title> -->
 </ion-header>
 
-<ion-content padding class="masters">
+<ion-content padding class="home">
     <br>
       <div class="logotipo">
           <ion-img style="width: 200px; height: 200px;"
-          src="../../assets/imgs/logo_carnaval.png" class="masters" alt="logo">Carnaval</ion-img>
+          src="../../assets/imgs/logo_carnaval.png" class="home" alt="logo">Carnaval</ion-img>
         </div>
     <br>
-  <div class="logotipo">
-    <button ion-button color="laranja" round large (click)="noticias()" style="width:45%">
+  <div class="botoes">
+    <button ion-button style="width:45%" color="secondary" round large (click)="noticias()">
         <div>
             <div>
                 <ion-icon name="refresh"></ion-icon>
@@ -24,7 +24,7 @@
       </div>
       </button>
 
-      <button ion-button color="laranja" round large (click)="cidade()" style="width:45%">
+      <button ion-button style="width:45%" color="secondary" round large (click)="cidade()">
           <div>
               <div>
                   <ion-icon name="pin"></ion-icon>
@@ -32,7 +32,7 @@
               <label>Cidade</label>
         </div>
         </button>
-        <button ion-button color="laranja" round large (click)="eventos()" style="width:45%">
+        <button ion-button style="width:45%" color="secondary" round large (click)="eventos()">
             <div>
               <div>
                     <ion-icon name="calendar"></ion-icon>
@@ -41,7 +41,7 @@
             </div>
           </button>
 
-          <button ion-button color="laranja" round large (click)="historia()" style="width:45%">
+          <button ion-button style="width:45%" color="secondary" round large (click)="historia()">
               <div>
                   <div>
                       <ion-icon name="book"></ion-icon>
@@ -50,7 +50,7 @@
               </div>
             </button>
 
-            <button ion-button color="laranja" round large (click)="telefone()" style="width:45%">
+            <button ion-button style="width:45%" color="secondary" round large (click)="telefone()">
                 <div>
                     <div>
                         <ion-icon name="call"></ion-icon>
@@ -59,7 +59,7 @@
                 </div>
               </button>
 
-              <button ion-button color="laranja" round large (click)="mapa()" style="width:45%">
+              <button ion-button style="width:45%" color="secondary" round large (click)="mapa()">
                   <div>
                       <div>
                           <ion-icon name="map"></ion-icon>

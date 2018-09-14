@@ -19,8 +19,14 @@ import { SobrePage } from '../pages/sobre/sobre';
 import { TelefonesPage } from '../pages/telefones/telefones';
 import { ListPage } from '../pages/list/list';
 import { MapaPage } from '../pages/mapa/mapa';
-import { ProviderTelefoneProvider } from '../providers/provider-telefone/provider-telefone';
-import { ProviderHoteisProvider } from '../providers/provider-hoteis/provider-hoteis';
+import { RestaurantesProvider } from '../providers/restaurantes/restaurantes';
+import { LojasProvider } from '../providers/lojas/lojas';
+import { HoteisProvider } from '../providers/hoteis/hoteis';
+import { CadastrarLojasPage } from '../pages/cadastrar-lojas/cadastrar-lojas';
+import { CadastrarRestaurantesPage } from '../pages/cadastrar-restaurantes/cadastrar-restaurantes';
+import { CadastrarHotelPage } from '../pages/cadastrar-hotel/cadastrar-hotel';
+import { DetalhesPage } from '../pages/detalhes/detalhes';
+import { DetalhesPageModule } from '../pages/detalhes/detalhes.module';
 
 export const firebaseConfig = {
 
@@ -37,7 +43,10 @@ export const firebaseConfig = {
     EventosPage,
     SobrePage,
     TelefonesPage,
-    MapaPage
+    MapaPage,
+    CadastrarHotelPage,
+    CadastrarLojasPage,
+    CadastrarRestaurantesPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +61,8 @@ export const firebaseConfig = {
       messagingSenderId: "421216346605"
     }),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    DetalhesPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -65,14 +75,19 @@ export const firebaseConfig = {
     EventosPage,
     SobrePage,
     TelefonesPage,
-    MapaPage
+    MapaPage,
+    CadastrarHotelPage,
+    CadastrarLojasPage,
+    CadastrarRestaurantesPage,
+    DetalhesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProviderTelefoneProvider,
-    ProviderHoteisProvider
+    RestaurantesProvider,
+    LojasProvider,
+    HoteisProvider
   ]
 })
 export class AppModule {}

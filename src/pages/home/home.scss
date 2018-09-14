@@ -1,32 +1,39 @@
 page-home {
+  .home {
+    background: color($colors, primary);
+  }
 
-}
 
-.masters {
-  background-color: #440A25;
-}
+  .logotipo {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    background: color($colors, primary);
+  }
 
-.logotipo {
-  width: 100%;
-  text-align: center;
-  align-content: center;
-  align-self: center;
-  background-color: #440A25;
-}
+  .botoes {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    background: color($colors, primary);
+  }
 
-.social {
-  width:100%;
-  text-align: center;
-  align-content: center;
-  align-self: center;
-  flex: fill;
+  .social {
+    width:100%;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    flex: fill;
 
-}
+  }
 
-#icone {
-  width: 50px;
-  height: 50px;
-  padding-right: 20px;
-  background-color: #440A25;
+  #icone {
+    width: 50px;
+    height: 50px;
+    padding-right: 20px;
+    background-color:color($colors, primary);
+  }
 }
 

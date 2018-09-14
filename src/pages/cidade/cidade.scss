@@ -28,4 +28,25 @@ page-cidade {
     ion-slide.swiper-slide {
     	align-items: flex-start;
 	}
+
+  button[ion-fab] {
+    contain:layout;
+    overflow: visible;
+    position: relative;
+
+    ion-label {
+        position: absolute;
+        top: -8px;
+        right: 40px;
+
+        color: black;
+        background-color: rgb(228, 228, 228);
+        line-height: 24px;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+  }
+  ion-slide {
+    align-items: flex-start;
+}
 }
