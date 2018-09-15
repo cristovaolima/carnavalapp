@@ -27,6 +27,7 @@ import { CadastrarRestaurantesPage } from '../pages/cadastrar-restaurantes/cadas
 import { CadastrarHotelPage } from '../pages/cadastrar-hotel/cadastrar-hotel';
 import { DetalhesPage } from '../pages/detalhes/detalhes';
 import { DetalhesPageModule } from '../pages/detalhes/detalhes.module';
+import { CallNumber } from '@ionic-native/call-number';
 
 export const firebaseConfig = {
 
@@ -87,7 +88,8 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestaurantesProvider,
     LojasProvider,
-    HoteisProvider
+    HoteisProvider,
+    CallNumber
   ]
 })
 export class AppModule {}

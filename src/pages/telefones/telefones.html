@@ -16,11 +16,11 @@
 <ion-content padding>
 
     <ion-list>
-        <button ion-item *ngFor="let p of item">
-          <div class="item-lugar" item-start>
-          {{p.lugar}}
+        <button ion-item *ngFor="let p of item" (click)="callEvent(p.telefone)">
+          <div class="item-lugar" item-start style="width:50%">
+            {{p.lugar}}
           </div>
-          <div class="item-telefone">
+          <div class="item-telefone" item-end>
             {{p.telefone}}
           </div>
         </button>

@@ -7,7 +7,6 @@ import { CadastrarHotelPage } from '../cadastrar-hotel/cadastrar-hotel';
 import { CadastrarRestaurantesPage } from '../cadastrar-restaurantes/cadastrar-restaurantes';
 import { CadastrarLojasPage } from '../cadastrar-lojas/cadastrar-lojas';
 import firebase from 'firebase';
-import { DetalhesPage } from '../detalhes/detalhes';
 
 
 /**
@@ -31,6 +30,7 @@ export class CidadePage {
   hoteis: any;
   restaurantes: any;
   lojas: any;
+
   public hoteisList: Array<any>;
 	public loadedHoteisList:Array<any>;
   public hoteisRef:firebase.database.Reference;
@@ -40,10 +40,6 @@ export class CidadePage {
   public lojasList: Array<any>;
 	public loadedLojasList:Array<any>;
 	public lojasRef:firebase.database.Reference;
-  // hoteis: Array<{nome: string, telefone: string, endereco: string}>;
-  // restaurantes: Array<{nome: string, telefone: string, endereco: string}>;
-  // lojas: Array<{nome: string, telefone: string, endereco: string}>;
-
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private evts:Events, private providerH: HoteisProvider,
@@ -59,12 +55,6 @@ export class CidadePage {
           this.tabs.select(data.tabIndex);
         }
         catch(ex){
-          //HACK: this sucks a lot. For some reason on first load of the app,
-          //the views are not loaded into the ViewControllerBase. It's a bug in ionic.
-          //This causes tabs.select to fail.
-          //as a recourse, I am calling the click method on the actual tab element
-          //this is totally brittle and likely to break in a subsequent release of ionic.
-          //sorry.
           let tabid = 'tab-t1-'+data.tabIndex;
           document.getElementById(tabid).click();
         }
