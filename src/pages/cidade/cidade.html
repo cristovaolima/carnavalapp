@@ -35,12 +35,12 @@
         <ion-list>
             <button ion-item *ngFor="let h of hoteis | async" (click)="itemTapped($event, h)">
               <div class="item-nome" item-start>
-                  {{h.nome}}
+                  <h3><strong>{{h.nome}}</strong></h3>
               </div>
-              <div class="item-endereco">
+              <div class="item-endereco" item-start>
                   {{h.endereco}}
               </div>
-              <div class="item-telefone">
+              <div class="item-telefone" item-start>
                 {{h.telefone}}
               </div>
             </button>
@@ -51,12 +51,12 @@
           <ion-list>
               <button ion-item *ngFor="let p of restaurantes | async" (click)="itemTapped($event, p)">
                 <div class="item-nome" item-start>
-                  {{p.nome}}
+                    <h3><strong>{{p.nome}}</strong></h3>
                 </div>
-                <div class="item-endereco">
+                <div class="item-endereco" item-start>
                     {{p.endereco}}
                     </div>
-                <div class="item-telefone">
+                <div class="item-telefone" item-start>
                   {{p.telefone}}
                 </div>
               </button>
@@ -67,12 +67,12 @@
           <ion-list>
               <button ion-item *ngFor="let p of lojas | async" (click)="itemTapped($event, p)">
                 <div class="item-nome" item-start>
-                {{p.nome}}
+                    <h3><strong>{{p.nome}}</strong></h3>
                 </div>
-                <div class="item-endereco">
+                <div class="item-endereco" item-start>
                     {{p.endereco}}
                     </div>
-                <div class="item-telefone">
+                <div class="item-telefone" item-start>
                   {{p.telefone}}
                 </div>
               </button>
