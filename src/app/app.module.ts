@@ -28,6 +28,10 @@ import { CadastrarHotelPage } from '../pages/cadastrar-hotel/cadastrar-hotel';
 import { DetalhesPage } from '../pages/detalhes/detalhes';
 import { DetalhesPageModule } from '../pages/detalhes/detalhes.module';
 import { CallNumber } from '@ionic-native/call-number';
+import { NoticiasProvider } from '../providers/noticias/noticias';
+import { CadastrarNoticiasPage } from '../pages/cadastrar-noticias/cadastrar-noticias';
+import { CadastrarEventosPage } from '../pages/cadastrar-eventos/cadastrar-eventos';
+import { EventosProvider } from '../providers/eventos/eventos';
 
 export const firebaseConfig = {
 
@@ -47,7 +51,9 @@ export const firebaseConfig = {
     MapaPage,
     CadastrarHotelPage,
     CadastrarLojasPage,
-    CadastrarRestaurantesPage
+    CadastrarRestaurantesPage,
+    CadastrarNoticiasPage,
+    CadastrarEventosPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +86,9 @@ export const firebaseConfig = {
     CadastrarHotelPage,
     CadastrarLojasPage,
     CadastrarRestaurantesPage,
-    DetalhesPage
+    DetalhesPage,
+    CadastrarNoticiasPage,
+    CadastrarEventosPage
   ],
   providers: [
     StatusBar,
@@ -89,7 +97,9 @@ export const firebaseConfig = {
     RestaurantesProvider,
     LojasProvider,
     HoteisProvider,
-    CallNumber
+    CallNumber,
+    NoticiasProvider,
+    EventosProvider
   ]
 })
 export class AppModule {}

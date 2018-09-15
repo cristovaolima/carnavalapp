@@ -3,9 +3,6 @@ import { IonicPage, NavController, NavParams, Events, Slides, ToastController } 
 import { HoteisProvider } from '../../providers/hoteis/hoteis';
 import { RestaurantesProvider } from '../../providers/restaurantes/restaurantes';
 import { LojasProvider } from '../../providers/lojas/lojas';
-import { CadastrarHotelPage } from '../cadastrar-hotel/cadastrar-hotel';
-import { CadastrarRestaurantesPage } from '../cadastrar-restaurantes/cadastrar-restaurantes';
-import { CadastrarLojasPage } from '../cadastrar-lojas/cadastrar-lojas';
 import firebase from 'firebase';
 
 
@@ -100,19 +97,6 @@ export class CidadePage {
     this.mySelectedIndex = navParams.data.tabIndex || 0;
     this.tabs=["Hotéis","Restaurantes", "Lojas"];
   }
-
-  hotel() {
-    this.navCtrl.push(CadastrarHotelPage);
-  }
-
-  restaurante() {
-    this.navCtrl.push(CadastrarRestaurantesPage);
-  }
-
-  loja() {
-    this.navCtrl.push(CadastrarLojasPage);
-  }
-
 
   removeRestaurante(key: string) {
     if(key) {

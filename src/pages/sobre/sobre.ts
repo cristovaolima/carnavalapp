@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CadastrarNoticiasPage } from '../cadastrar-noticias/cadastrar-noticias';
+import { CadastrarHotelPage } from '../cadastrar-hotel/cadastrar-hotel';
+import { CadastrarRestaurantesPage } from '../cadastrar-restaurantes/cadastrar-restaurantes';
+import { CadastrarLojasPage } from '../cadastrar-lojas/cadastrar-lojas';
+import { CadastrarEventosPage } from '../cadastrar-eventos/cadastrar-eventos';
 
 /**
  * Generated class for the SobrePage page.
@@ -32,6 +37,26 @@ export class SobrePage {
   ttB() {
     window.open("https://twitter.com/bismarkvictor",'_system', 'location=yes');
   }
+
+  hotel() {
+    this.navCtrl.push(CadastrarHotelPage);
+  }
+
+  restaurante() {
+    this.navCtrl.push(CadastrarRestaurantesPage);
+  }
+
+  loja() {
+    this.navCtrl.push(CadastrarLojasPage);
+  }
+
+  noticia() {
+    this.navCtrl.push(CadastrarNoticiasPage);
+  }
+  evento() {
+    this.navCtrl.push(CadastrarEventosPage);
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SobrePage');

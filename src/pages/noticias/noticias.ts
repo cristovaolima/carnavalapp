@@ -14,9 +14,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'noticias.html',
 })
 export class NoticiasPage {
+  // noticias: Array<{ titulo: string, imagem: string, corpo: string, data: string, autor: string }>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+
+  itemTapped(event, p) {
+    // That's right, we're pushing to ourselves!
+    this.navCtrl.push('DetalhesPage', {
+      push_item: p
+    });
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NoticiasPage');
