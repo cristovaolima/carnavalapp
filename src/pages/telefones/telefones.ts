@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
 import { CallNumber } from '@ionic-native/call-number';
 
 /**
@@ -49,13 +48,6 @@ export class TelefonesPage {
         lugar: 'Hospital Tiago Dias',
         telefone: '84 3417-1252',
       });
-
-    // for (let p = 1; p < 6; p++) {
-    //   this.item.push({
-    //   	lugar: 'Lugar ' + p,
-    //     telefone: 'Telefone ' + p,
-    //   });
-    // }
   }
 
 
@@ -64,13 +56,6 @@ callEvent(phone: string) {
   .then(res => console.log('Discando...', res))
   .catch(err => console.log('Erro ao discar', err));
 }
-
-  itemTapped(event, p) {
-    // That's right, we're pushing to ourselves!
-    this.navCtrl.push(HomePage, {
-      push_item: p
-    });
-  }
 
 
   ionViewDidLoad() {

@@ -33,12 +33,12 @@ export class HoteisProvider {
     return new Promise((resolve, reject) => {
       if (hotel.key) {
         this.db.list(this.PATH)
-          .update(hotel.key, { nome: hotel.nome, endereco: hotel.endereco, telefone: hotel.telefone })
+          .update(hotel.key, { nome: hotel.nome, endereco: hotel.endereco, telefone: hotel.telefone, celular: hotel.celular })
           .then(() => resolve())
           .catch((e) => reject(e));
       } else {
         this.db.list(this.PATH)
-          .push({ nome: hotel.nome, endereco: hotel.endereco, telefone: hotel.telefone })
+          .push({ nome: hotel.nome, endereco: hotel.endereco, telefone: hotel.telefone, celular: hotel.celular })
           .then(() => resolve());
       }
     })

@@ -19,6 +19,7 @@ export class CadastrarHotelPage {
   nome: string;
   endereco: string;
   telefone: string;
+  celular: string;
   form: FormGroup;
   message_success: string;
   public hotel: any;
@@ -36,7 +37,8 @@ export class CadastrarHotelPage {
       key: [this.hotel.key],
       nome: [this.hotel.nome, Validators.required],
       endereco: [this.hotel.endereco, Validators.required],
-      telefone: [this.hotel.telefone, Validators.required]
+      telefone: [this.hotel.telefone, Validators.required],
+      celular: [this.hotel.celular]
     });
   }
 

@@ -19,6 +19,7 @@ export class CadastrarLojasPage {
   nome: string;
   endereco: string;
   telefone: string;
+  celular: string;
   form: FormGroup;
   message_success: string;
   public loja: any;
@@ -35,7 +36,8 @@ export class CadastrarLojasPage {
       key: [this.loja.key],
       nome: [this.loja.nome, Validators.required],
       endereco: [this.loja.endereco, Validators.required],
-      telefone: [this.loja.telefone, Validators.required]
+      telefone: [this.loja.telefone, Validators.required],
+      celular: [this.loja.celular]
     });
   }
 

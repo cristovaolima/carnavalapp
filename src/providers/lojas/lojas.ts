@@ -33,12 +33,12 @@ export class LojasProvider {
     return new Promise((resolve, reject) => {
       if (lojas.key) {
         this.db.list(this.PATH)
-          .update(lojas.key, { nome: lojas.nome, endereco: lojas.endereco, telefone: lojas.telefone })
+          .update(lojas.key, { nome: lojas.nome, endereco: lojas.endereco, telefone: lojas.telefone, celular: lojas.celular })
           .then(() => resolve())
           .catch((e) => reject(e));
       } else {
         this.db.list(this.PATH)
-          .push({ nome: lojas.nome, endereco: lojas.endereco, telefone: lojas.telefone })
+          .push({ nome: lojas.nome, endereco: lojas.endereco, telefone: lojas.telefone, celular: lojas.celular })
           .then(() => resolve());
       }
     })

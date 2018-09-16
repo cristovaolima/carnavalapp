@@ -19,6 +19,7 @@ export class CadastrarRestaurantesPage {
   nome: string;
   endereco: string;
   telefone: string;
+  celular: string;
   form: FormGroup;
   message_success: string;
   public restaurante: any;
@@ -36,7 +37,8 @@ export class CadastrarRestaurantesPage {
       key: [this.restaurante.key],
       nome: [this.restaurante.nome, Validators.required],
       endereco: [this.restaurante.endereco, Validators.required],
-      telefone: [this.restaurante.telefone, Validators.required]
+      telefone: [this.restaurante.telefone, Validators.required],
+      celular: [this.restaurante.celular]
     });
   }
 
